@@ -1,0 +1,1 @@
+1. Make the whole portfolio a monkeytype typing test and when the user starts typniung just show wpm smoewhere, that is fun :D
