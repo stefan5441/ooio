@@ -1,5 +1,5 @@
+import { Tab } from "../types";
 import { NavBar } from "./NavBar";
-import type { Tab } from "../types";
 
 type Props = {
   children: React.ReactNode;

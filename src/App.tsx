@@ -1,19 +1,21 @@
 import { useState } from "react";
 
-import type { Tab } from "./types";
+import { Tab } from "./types";
 import { Home } from "./pages/Home";
-import { Projects } from "./pages/Projects";
-import { Recently } from "./pages/Recently";
+import { Activity } from "./pages/Activity";
 import { PageLayout } from "./components/PageLayout";
+import { PersonalProjects } from "./pages/PersonalProjects";
+import { ProfessionalWork } from "./pages/ProfessionalWork";
 
 function App() {
-  const [tab, setTab] = useState<Tab>("Home");
+  const [tab, setTab] = useState<Tab>(Tab.Home);
 
   return (
     <PageLayout setTab={setTab} activeTab={tab}>
-      {tab === "Home" && <Home />}
-      {tab === "Projects" && <Projects />}
-      {tab === "Recently" && <Recently />}
+      {tab === Tab.Home && <Home />}
+      {tab === Tab.ProfessionalWork && <ProfessionalWork />}
+      {tab === Tab.PersonalProjects && <PersonalProjects />}
+      {tab === Tab.Activity && <Activity />}
     </PageLayout>
   );
 }
