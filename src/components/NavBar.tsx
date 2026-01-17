@@ -81,7 +81,7 @@ export const NavBar = ({ setTab, activeTab }: Props) => {
   ];
 
   return (
-    <div className="flex justify-center items-center gap-12">
+    <>
       <div className="flex gap-6">
         {navTabsConfig.map((tab) => (
           <Button
@@ -109,6 +109,6 @@ export const NavBar = ({ setTab, activeTab }: Props) => {
           />
         ))}
       </div>
-    </div>
+    </>
   );
 };
