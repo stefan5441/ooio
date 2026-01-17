@@ -4,8 +4,8 @@ export const Home = () => {
   const { days, months, years } = calculateTimeEmployed();
 
   return (
-    <div className="grid grid-cols-12 gap-6 items-center">
-      <div className="col-span-6">
+    <div className="grid grid-cols-2 gap-6 items-center">
+      <div className="col-span-1">
         <h1 className="text-5xl font-bold mb-4">Stefan Chambov</h1>
         <p className="text-lg font-mono">
           Hello, nice to meet you. I am a Software Engineer who has been working professionally for {years} years,{" "}
@@ -18,7 +18,7 @@ export const Home = () => {
         </p>
       </div>
 
-      <div className="col-span-6 mx-auto">
+      <div className="col-span-1 mx-auto">
         <img src="bella.jpeg" alt="Bella the cat" className="h-110 rounded-lg" />
       </div>
     </div>
