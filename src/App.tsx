@@ -5,7 +5,7 @@ import { Home } from "./pages/Home";
 import { Activity } from "./pages/Activity";
 import { PageLayout } from "./components/PageLayout";
 import { PersonalProjects } from "./pages/PersonalProjects";
-import { ProfessionalWork } from "./pages/ProfessionalWork";
+import { ProfessionalWork } from "./pages/ProfessionalWork/ProfessionalWork";
 
 function App() {
   const [tab, setTab] = useState<Tab>(Tab.Home);

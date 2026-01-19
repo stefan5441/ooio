@@ -13,4 +13,14 @@
     color: #bae6fd;
     font-family: "Oxygen", system-ui, sans-serif;
   }
+
+  /* Hide scrollbar */
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
+  }
 }
