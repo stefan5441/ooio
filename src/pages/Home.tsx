@@ -7,14 +7,19 @@ export const Home = () => {
     <div className="grid grid-cols-2 gap-6 items-center">
       <div className="col-span-1">
         <h1 className="text-5xl font-bold mb-4">Stefan Chambov</h1>
-        <p className="text-lg font-mono">
-          Hello, nice to meet you. I am a Software Engineer who has been working professionally for {years} years,{" "}
-          {months} months, and {days} days. I have experience working as a Microsoft Dynamics 365 CRM / Power Apps
-          developer (aka JavaScript/C#), and as a Frontend React developer. I much prefer React. In my free time, I code
-          web apps and do other fun stuff. The cat in the image is a cat named Bella that was living in the hall of the
-          building where my girlfriend and I lived, and we used to let her in and let her sleep in our apartment every
-          night. That was my first pet ever. My parents did not let me have a dog, which is sad, but I will get a dog
-          very soon. You can ask me about getting a dog when you interview me. Stop farting, bro; it smells bad in here.
+        <p className="text-lg">
+          Hello, nice to meet you. I’m a Software Engineer with {years} years, {months} months, and {days} days of
+          professional experience. I’ve worked as a Microsoft Dynamics 365 CRM / Power Apps developer (JavaScript/C#)
+          and as a Frontend React developer. I love React very much!
+        </p>
+
+        <p className="text-lg mt-4">
+          In my free time, I build web apps and work on personal projects. The cat in the image is Bella, who briefly
+          became my first pet while living in our apartment building.
+        </p>
+
+        <p className="text-lg mt-4">
+          Contact me to find out more about my exciting life and cutting-edge programming skills. 🫵
         </p>
       </div>
 

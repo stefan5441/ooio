@@ -20,3 +20,5 @@ export const calculateTimeEmployed = () => {
 
   return { years, months, days };
 };
+
+export const openLinkOnClick = (link: string) => () => window.open(link, "_blank");

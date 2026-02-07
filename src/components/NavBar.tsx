@@ -6,6 +6,7 @@ import { FaCat, FaDog, FaFish, FaFrog, FaGithub, FaLinkedin } from "react-icons/
 
 import { Tab } from "../types";
 import { Button } from "./Button";
+import { openLinkOnClick } from "../utils";
 
 type NavBarTab = {
   icon: IconType;
@@ -60,17 +61,17 @@ export const NavBar = ({ setTab, activeTab }: Props) => {
     {
       label: "github",
       icon: FaGithub,
-      onClick: () => window.open("https://github.com/stefan5441", "_blank"),
+      onClick: openLinkOnClick("https://github.com/stefan5441"),
     },
     {
       label: "linkedin",
       icon: FaLinkedin,
-      onClick: () => window.open("https://www.linkedin.com/in/stefanchambov/", "_blank"),
+      onClick: openLinkOnClick("https://www.linkedin.com/in/stefanchambov/"),
     },
     {
       label: "leetcode",
       icon: SiLeetcode,
-      onClick: () => window.open("https://leetcode.com/u/5441anr/", "_blank"),
+      onClick: openLinkOnClick("https://leetcode.com/u/5441anr/"),
     },
     {
       label: "copy mail",
