@@ -1,17 +1,16 @@
-import { IoTime } from "react-icons/io5";
 import { useEffect, useRef, useState } from "react";
-import { FaAngleLeft, FaAngleRight, FaLink } from "react-icons/fa";
+import { FaAngleLeft, FaAngleRight, FaGithub, FaLink } from "react-icons/fa";
 
+import { personalProjects } from "./constants";
 import { Button } from "../../components/Button";
-import { professionalWorkProjects } from "./constants";
 
-export const ProfessionalWork = () => {
+export const PersonalProjects = () => {
   const [projectIndex, setProjectIndex] = useState<number>(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const project = professionalWorkProjects[projectIndex];
+  const project = personalProjects[projectIndex];
   const hasPrev = projectIndex > 0;
-  const hasNext = projectIndex < professionalWorkProjects.length - 1;
+  const hasNext = projectIndex < personalProjects.length - 1;
 
   // Scroll to top when project changes
   useEffect(() => {
@@ -22,19 +21,11 @@ export const ProfessionalWork = () => {
     <div className="grid grid-cols-2 gap-6 h-full">
       {/* Left column */}
       <div ref={scrollRef} className="col-span-1 overflow-y-auto space-y-6 text-lg">
-        <h1 className="text-5xl font-bold">{project.project}</h1>
+        <h1 className="text-5xl font-bold">{project.name}</h1>
 
         <div className="flex gap-4">
-          <span className="inline-flex items-center gap-1 text-zinc-800 bg-sky-200 rounded-xl py-1 px-2">
-            <IoTime /> {project.duration}
-          </span>
-          <Button icon={FaLink} label="project/company" onClick={project.linkToProjectOnClick} />
-        </div>
-
-        {/* Role */}
-        <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">My role on the project</p>
-          <p>{project.role}</p>
+          <Button icon={FaLink} label="link to project" onClick={project.linkToProjectOnClick} />
+          <Button icon={FaGithub} label="github repository" onClick={project.linkToRepoOnClick} />
         </div>
 
         {/* Technologies */}
@@ -58,17 +49,11 @@ export const ProfessionalWork = () => {
           <p>{project.projectDescription}</p>
         </div>
 
-        {/* What I did */}
-        <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">What I did</p>
-          <p>{project.jobDescription}</p>
-        </div>
-
         {/* Features */}
         <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">Features I implemented</p>
+          <p className="text-sm font-thin uppercase">Project features</p>
           <ul className="list-disc pl-5 space-y-1">
-            {project.featuresImplemented.map((feature, i) => (
+            {project.features.map((feature, i) => (
               <li key={i}>{feature}</li>
             ))}
           </ul>
@@ -77,7 +62,7 @@ export const ProfessionalWork = () => {
 
       {/* Right column */}
       <div className="col-span-1 relative flex items-center justify-center">
-        <img src={project.projectImgSrc} alt={project.project} className="rounded-lg" />
+        <img src={project.projectImgSrc} alt={project.name} className="rounded-lg" />
 
         <div className="absolute bottom-0 right-4 flex gap-2">
           <Button icon={FaAngleLeft} iconSize={32} onClick={() => setProjectIndex((i) => i - 1)} disabled={!hasPrev} />

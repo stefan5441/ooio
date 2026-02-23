@@ -9,8 +9,8 @@ export const Home = () => {
         <h1 className="text-5xl font-bold mb-4">Stefan Chambov</h1>
         <p className="text-lg">
           Hello, nice to meet you. I’m a Software Engineer with {years} years, {months} months, and {days} days of
-          professional experience. I’ve worked as a Microsoft Dynamics 365 CRM / Power Apps developer (JavaScript/C#)
-          and as a Frontend React developer. I love React very much!
+          professional experience. I’ve worked as a Frontend React developer and as a Microsoft Dynamics 365 CRM / Power
+          Apps developer (JavaScript/C#). I love React very much!
         </p>
 
         <p className="text-lg mt-4">

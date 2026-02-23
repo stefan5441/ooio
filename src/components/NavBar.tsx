@@ -2,7 +2,7 @@ import { useState } from "react";
 import type { IconType } from "react-icons";
 import { SiLeetcode } from "react-icons/si";
 import { MdEmail, MdMarkEmailRead } from "react-icons/md";
-import { FaCat, FaDog, FaFish, FaFrog, FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaCat, FaDog, FaFrog, FaGithub, FaLinkedin } from "react-icons/fa";
 
 import { Tab } from "../types";
 import { Button } from "./Button";
@@ -49,12 +49,13 @@ export const NavBar = ({ setTab, activeTab }: Props) => {
       onClick: () => setTab(Tab.PersonalProjects),
       isActive: activeTab === Tab.PersonalProjects,
     },
-    {
-      label: "activity",
-      icon: FaFish,
-      onClick: () => setTab(Tab.Activity),
-      isActive: activeTab === Tab.Activity,
-    },
+    // TODO
+    // {
+    //   label: "activity",
+    //   icon: FaFish,
+    //   onClick: () => setTab(Tab.Activity),
+    //   isActive: activeTab === Tab.Activity,
+    // },
   ];
 
   const infoTabsConfig: NavBarTab[] = [

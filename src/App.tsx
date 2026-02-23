@@ -4,7 +4,7 @@ import { Tab } from "./types";
 import { Home } from "./pages/Home";
 import { Activity } from "./pages/Activity";
 import { PageLayout } from "./components/PageLayout";
-import { PersonalProjects } from "./pages/PersonalProjects";
+import { PersonalProjects } from "./pages/PersonalProjects/PersonalProjects";
 import { ProfessionalWork } from "./pages/ProfessionalWork/ProfessionalWork";
 
 function App() {

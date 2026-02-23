@@ -12,8 +12,8 @@ import {
   SiVitest,
 } from "react-icons/si";
 
-import type { WorkProjectConfig } from "./types";
 import { openLinkOnClick } from "../../utils";
+import type { WorkProjectConfig } from "./types";
 
 export const professionalWorkProjects: WorkProjectConfig[] = [
   {
