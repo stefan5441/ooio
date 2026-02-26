@@ -4,6 +4,7 @@ import { FaAngleLeft, FaAngleRight, FaLink } from "react-icons/fa";
 
 import { Button } from "../../components/Button";
 import { professionalWorkProjects } from "./constants";
+import { LabeledSection } from "../../components/LabeledSection";
 
 export const ProfessionalWork = () => {
   const [projectIndex, setProjectIndex] = useState<number>(0);
@@ -32,14 +33,10 @@ export const ProfessionalWork = () => {
         </div>
 
         {/* Role */}
-        <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">My role on the project</p>
-          <p>{project.role}</p>
-        </div>
+        <LabeledSection label="My role on the project">{project.role}</LabeledSection>
 
         {/* Technologies */}
-        <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">Technologies used</p>
+        <LabeledSection label="Technologies used">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 leading-normal">
             {project.techUsed.map((tech) => (
               <Button
@@ -50,35 +47,27 @@ export const ProfessionalWork = () => {
               />
             ))}
           </div>
-        </div>
+        </LabeledSection>
 
         {/* Project description */}
-        <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">Project description</p>
-          <p>{project.projectDescription}</p>
-        </div>
+        <LabeledSection label="Project description">{project.projectDescription}</LabeledSection>
 
         {/* What I did */}
-        <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">What I did</p>
-          <p>{project.jobDescription}</p>
-        </div>
+        <LabeledSection label="What I did">{project.jobDescription}</LabeledSection>
 
         {/* Features */}
-        <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">Features I implemented</p>
+        <LabeledSection label="Features I implemented">
           <ul className="list-disc pl-5 space-y-1">
             {project.featuresImplemented.map((feature, i) => (
               <li key={i}>{feature}</li>
             ))}
           </ul>
-        </div>
+        </LabeledSection>
       </div>
 
       {/* Right column */}
       <div className="col-span-1 relative flex items-center justify-center">
         <img src={project.projectImgSrc} alt={project.project} className="rounded-lg" />
-
         <div className="absolute bottom-0 right-4 flex gap-2">
           <Button icon={FaAngleLeft} iconSize={32} onClick={() => setProjectIndex((i) => i - 1)} disabled={!hasPrev} />
           <Button icon={FaAngleRight} iconSize={32} onClick={() => setProjectIndex((i) => i + 1)} disabled={!hasNext} />

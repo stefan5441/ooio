@@ -3,6 +3,7 @@ import { FaAngleLeft, FaAngleRight, FaGithub, FaLink } from "react-icons/fa";
 
 import { personalProjects } from "./constants";
 import { Button } from "../../components/Button";
+import { LabeledSection } from "../../components/LabeledSection";
 
 export const PersonalProjects = () => {
   const [projectIndex, setProjectIndex] = useState<number>(0);
@@ -29,8 +30,7 @@ export const PersonalProjects = () => {
         </div>
 
         {/* Technologies */}
-        <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">Technologies used</p>
+        <LabeledSection label="Technologies used">
           <div className="flex flex-wrap items-center gap-x-3 gap-y-1 leading-normal">
             {project.techUsed.map((tech) => (
               <Button
@@ -41,23 +41,19 @@ export const PersonalProjects = () => {
               />
             ))}
           </div>
-        </div>
+        </LabeledSection>
 
         {/* Project description */}
-        <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">Project description</p>
-          <p>{project.projectDescription}</p>
-        </div>
+        <LabeledSection label="Project description">{project.projectDescription}</LabeledSection>
 
         {/* Features */}
-        <div className="space-y-1">
-          <p className="text-sm font-thin uppercase">Project features</p>
+        <LabeledSection label="Project features">
           <ul className="list-disc pl-5 space-y-1">
             {project.features.map((feature, i) => (
               <li key={i}>{feature}</li>
             ))}
           </ul>
-        </div>
+        </LabeledSection>
       </div>
 
       {/* Right column */}
