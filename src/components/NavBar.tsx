@@ -4,9 +4,9 @@ import { SiLeetcode } from "react-icons/si";
 import { MdEmail, MdMarkEmailRead } from "react-icons/md";
 import { FaCat, FaDog, FaFrog, FaGithub, FaLinkedin } from "react-icons/fa";
 
-import { Tab } from "../types";
 import { Button } from "./Button";
 import { openLinkOnClick } from "../utils";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type NavBarTab = {
   icon: IconType;
@@ -16,12 +16,9 @@ type NavBarTab = {
   isDisabled?: boolean;
 };
 
-type Props = {
-  setTab: React.Dispatch<React.SetStateAction<Tab>>;
-  activeTab: Tab;
-};
-
-export const NavBar = ({ setTab, activeTab }: Props) => {
+export const NavBar = () => {
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -34,20 +31,20 @@ export const NavBar = ({ setTab, activeTab }: Props) => {
     {
       label: "home",
       icon: FaFrog,
-      onClick: () => setTab(Tab.Home),
-      isActive: activeTab === Tab.Home,
+      onClick: () => navigate("/"),
+      isActive: pathname === "/",
     },
     {
       label: "professional work",
       icon: FaDog,
-      onClick: () => setTab(Tab.ProfessionalWork),
-      isActive: activeTab === Tab.ProfessionalWork,
+      onClick: () => navigate("/professional-work"),
+      isActive: pathname.startsWith("/professional-work"),
     },
     {
       label: "personal projects",
       icon: FaCat,
-      onClick: () => setTab(Tab.PersonalProjects),
-      isActive: activeTab === Tab.PersonalProjects,
+      onClick: () => navigate("/personal-projects"),
+      isActive: pathname.startsWith("/personal-projects"),
     },
     // TODO
     // {
@@ -97,7 +94,7 @@ export const NavBar = ({ setTab, activeTab }: Props) => {
         ))}
       </div>
 
-      <div className="font-extrabold">/</div>
+      <div className="font-extrabold text-primary">/</div>
 
       <div className="flex gap-6">
         {infoTabsConfig.map((tab) => (

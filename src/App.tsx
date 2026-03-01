@@ -1,22 +1,25 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { Tab } from "./types";
 import { Home } from "./pages/Home";
 import { Activity } from "./pages/Activity";
 import { PageLayout } from "./components/PageLayout";
 import { PersonalProjects } from "./pages/PersonalProjects/PersonalProjects";
 import { ProfessionalWork } from "./pages/ProfessionalWork/ProfessionalWork";
+import { ProfessionalWorkProject } from "./pages/ProfessionalWork/ProfessionalWorkProject";
 
 function App() {
-  const [tab, setTab] = useState<Tab>(Tab.Home);
-
   return (
-    <PageLayout setTab={setTab} activeTab={tab}>
-      {tab === Tab.Home && <Home />}
-      {tab === Tab.ProfessionalWork && <ProfessionalWork />}
-      {tab === Tab.PersonalProjects && <PersonalProjects />}
-      {tab === Tab.Activity && <Activity />}
-    </PageLayout>
+    <BrowserRouter>
+      <PageLayout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/professional-work" element={<ProfessionalWork />} />
+          <Route path="/professional-work/:projectId" element={<ProfessionalWorkProject />} />
+          <Route path="/personal-projects" element={<PersonalProjects />} />
+          <Route path="/activity" element={<Activity />} />
+        </Routes>
+      </PageLayout>
+    </BrowserRouter>
   );
 }
 

@@ -1,6 +1,7 @@
 import type { IconType } from "react-icons";
 
 export type WorkProjectConfig = {
+  id: string;
   project: string;
   role: string;
   duration: string;

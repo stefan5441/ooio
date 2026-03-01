@@ -1,78 +1,41 @@
 import { IoTime } from "react-icons/io5";
-import { useEffect, useRef, useState } from "react";
-import { FaAngleLeft, FaAngleRight, FaLink } from "react-icons/fa";
-
-import { Button } from "../../components/Button";
+import { MdBadge } from "react-icons/md";
+import { useNavigate } from "react-router-dom";
 import { professionalWorkProjects } from "./constants";
-import { LabeledSection } from "../../components/LabeledSection";
 
 export const ProfessionalWork = () => {
-  const [projectIndex, setProjectIndex] = useState<number>(0);
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-  const project = professionalWorkProjects[projectIndex];
-  const hasPrev = projectIndex > 0;
-  const hasNext = projectIndex < professionalWorkProjects.length - 1;
-
-  // Scroll to top when project changes
-  useEffect(() => {
-    scrollRef.current?.scrollTo({ top: 0, behavior: "smooth" });
-  }, [projectIndex]);
+  const navigate = useNavigate();
 
   return (
-    <div className="grid grid-cols-2 gap-6 h-full">
-      {/* Left column */}
-      <div ref={scrollRef} className="col-span-1 overflow-y-auto space-y-6 text-lg">
-        <h1 className="text-5xl font-bold">{project.project}</h1>
-
-        <div className="flex gap-4">
-          <span className="inline-flex items-center gap-1 text-zinc-800 bg-sky-200 rounded-xl py-1 px-2">
-            <IoTime /> {project.duration}
-          </span>
-          <Button icon={FaLink} label="project/company" onClick={project.linkToProjectOnClick} />
-        </div>
-
-        {/* Role */}
-        <LabeledSection label="My role on the project">{project.role}</LabeledSection>
-
-        {/* Technologies */}
-        <LabeledSection label="Technologies used">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 leading-normal">
-            {project.techUsed.map((tech) => (
-              <Button
-                key={tech.name}
-                label={tech.name}
-                icon={tech.icon}
-                onClick={() => window.open(tech.url, "_blank")}
-              />
-            ))}
+    <div className="grid grid-cols-3 gap-6 items-start pt-2">
+      {professionalWorkProjects.map((project) => (
+        <div
+          key={project.project}
+          onClick={() => navigate(`/professional-work/${project.id}`)}
+          className="h-100 flex flex-col bg-surface rounded-xl 
+          transition-all duration-200 hover:-translate-y-1 cursor-pointer"
+        >
+          <div className="h-48 overflow-hidden rounded-t-xl">
+            <img
+              src={project.projectImgSrc}
+              alt={project.project}
+              className="w-full h-full object-cover object-center"
+            />
           </div>
-        </LabeledSection>
-
-        {/* Project description */}
-        <LabeledSection label="Project description">{project.projectDescription}</LabeledSection>
-
-        {/* What I did */}
-        <LabeledSection label="What I did">{project.jobDescription}</LabeledSection>
-
-        {/* Features */}
-        <LabeledSection label="Features I implemented">
-          <ul className="list-disc pl-5 space-y-1">
-            {project.featuresImplemented.map((feature, i) => (
-              <li key={i}>{feature}</li>
-            ))}
-          </ul>
-        </LabeledSection>
-      </div>
-
-      {/* Right column */}
-      <div className="col-span-1 relative flex items-center justify-center">
-        <img src={project.projectImgSrc} alt={project.project} className="rounded-lg" />
-        <div className="absolute bottom-0 right-4 flex gap-2">
-          <Button icon={FaAngleLeft} iconSize={32} onClick={() => setProjectIndex((i) => i - 1)} disabled={!hasPrev} />
-          <Button icon={FaAngleRight} iconSize={32} onClick={() => setProjectIndex((i) => i + 1)} disabled={!hasNext} />
+          <div className="px-4 py-4 flex flex-col gap-3">
+            <p className="text-lg font-bold">{project.project}</p>
+            <p className="line-clamp-3 text-sm text-text-muted leading-relaxed">{project.projectDescription}</p>
+            <div className="flex flex-col gap-1 text-sm text-text-muted">
+              <p className="flex items-center gap-2">
+                <MdBadge className="shrink-0" /> {project.role}
+              </p>
+              <p className="flex items-center gap-2">
+                <IoTime className="shrink-0" /> {project.duration}
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 };

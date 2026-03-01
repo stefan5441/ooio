@@ -5,7 +5,7 @@ type Props = {
 export const LabeledSection = ({ label, children }: React.PropsWithChildren<Props>) => {
   return (
     <div className="space-y-1">
-      <p className="text-sm font-thin uppercase tracking-widest">{label}</p>
+      <p className="text-xs font-thin uppercase tracking-widest">{label}</p>
       {children}
     </div>
   );

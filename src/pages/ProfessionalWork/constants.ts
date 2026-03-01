@@ -17,6 +17,7 @@ import type { WorkProjectConfig } from "./types";
 
 export const professionalWorkProjects: WorkProjectConfig[] = [
   {
+    id: "xarvio",
     project: "xarvio Field Manager",
     role: "Frontend React Developer",
     duration: "1 year 5 months (ongoing)",
@@ -85,6 +86,7 @@ export const professionalWorkProjects: WorkProjectConfig[] = [
     ],
   },
   {
+    id: "sodexo",
     project: "Sodexo – Dynamics 365 Field Service CRM",
     role: "Microsoft Dynamics 365 CRM & Azure Developer",
     duration: "1 year",
@@ -134,6 +136,7 @@ export const professionalWorkProjects: WorkProjectConfig[] = [
     ],
   },
   {
+    id: "vat",
     project: "VAT Group – ERP Process Automation",
     role: "Microsoft Azure Developer",
     duration: "2 months",
@@ -166,6 +169,7 @@ export const professionalWorkProjects: WorkProjectConfig[] = [
     ],
   },
   {
+    id: "octopus-investments",
     project: "Octopus Investments – Dynamics 365 CRM",
     role: "Microsoft Dynamics CRM and Power Apps Developer",
     duration: "3 months",
