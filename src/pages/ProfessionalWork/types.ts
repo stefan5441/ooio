@@ -2,7 +2,7 @@ import type { IconType } from "react-icons";
 
 export type WorkProjectConfig = {
   id: string;
-  project: string;
+  name: string;
   role: string;
   duration: string;
   techUsed: Array<{

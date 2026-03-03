@@ -94,7 +94,7 @@ export const NavBar = () => {
         ))}
       </div>
 
-      <div className="font-extrabold text-primary">/</div>
+      <div className="text-primary font-extrabold">/</div>
 
       <div className="flex gap-6">
         {infoTabsConfig.map((tab) => (

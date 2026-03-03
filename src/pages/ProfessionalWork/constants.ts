@@ -18,11 +18,13 @@ import type { WorkProjectConfig } from "./types";
 export const professionalWorkProjects: WorkProjectConfig[] = [
   {
     id: "xarvio",
-    project: "xarvio Field Manager",
+    name: "xarvio Field Manager",
     role: "Frontend React Developer",
     duration: "1 year 5 months (ongoing)",
-    projectImgSrc: "xarviofm.png",
-    linkToProjectOnClick: openLinkOnClick("https://fm.xarvio.com/de/en_de/login"),
+    projectImgSrc: "/xarviofm.png",
+    linkToProjectOnClick: openLinkOnClick(
+      "https://fm.xarvio.com/de/en_de/login",
+    ),
     techUsed: [
       {
         name: "React",
@@ -87,10 +89,10 @@ export const professionalWorkProjects: WorkProjectConfig[] = [
   },
   {
     id: "sodexo",
-    project: "Sodexo – Dynamics 365 Field Service CRM",
+    name: "Sodexo – Dynamics 365 Field Service CRM",
     role: "Microsoft Dynamics 365 CRM & Azure Developer",
     duration: "1 year",
-    projectImgSrc: "sodexo.webp",
+    projectImgSrc: "/sodexo.webp",
     linkToProjectOnClick: openLinkOnClick("https://www.sodexo.com/"),
     techUsed: [
       {
@@ -137,10 +139,10 @@ export const professionalWorkProjects: WorkProjectConfig[] = [
   },
   {
     id: "vat",
-    project: "VAT Group – ERP Process Automation",
+    name: "VAT Group – ERP Process Automation",
     role: "Microsoft Azure Developer",
     duration: "2 months",
-    projectImgSrc: "vat.jpg",
+    projectImgSrc: "/vat.jpg",
     linkToProjectOnClick: openLinkOnClick("https://www.vatgroup.com/en"),
     techUsed: [
       {
@@ -170,10 +172,10 @@ export const professionalWorkProjects: WorkProjectConfig[] = [
   },
   {
     id: "octopus-investments",
-    project: "Octopus Investments – Dynamics 365 CRM",
+    name: "Octopus Investments – Dynamics 365 CRM",
     role: "Microsoft Dynamics CRM and Power Apps Developer",
     duration: "3 months",
-    projectImgSrc: "octopus.webp",
+    projectImgSrc: "/octopus.webp",
     linkToProjectOnClick: openLinkOnClick("https://octopusinvestments.com/"),
     techUsed: [
       {

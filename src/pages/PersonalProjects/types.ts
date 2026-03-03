@@ -1,6 +1,7 @@
 import type { IconType } from "react-icons";
 
 export type PersonalProjectConfig = {
+  id: string;
   name: string;
   techUsed: Array<{
     name: string;

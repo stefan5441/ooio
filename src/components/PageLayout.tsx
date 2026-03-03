@@ -8,12 +8,12 @@ type Props = {
 
 export const PageLayout = ({ children }: Props) => {
   return (
-    <div className="h-full px-36 flex flex-col">
-      <div className="h-24 flex justify-center items-center gap-12 shrink-0">
+    <div className="flex h-screen flex-col px-36">
+      <div className="flex h-24 shrink-0 items-center justify-center gap-12">
         <NavBar />
       </div>
-      <div className="overflow-y-auto flex-1 flex">{children}</div>
-      <div className="h-16 shrink-0 flex items-center justify-between">
+      <div className="min-h-0 w-full flex-1 overflow-y-auto">{children}</div>
+      <div className="flex h-16 shrink-0 items-center justify-between">
         <Button
           onClick={openLinkOnClick("https://github.com/stefan5441/ooio")}
           label={"I love coding React applications!"}

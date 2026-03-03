@@ -7,61 +7,13 @@ import { IoLogoJavascript } from "react-icons/io5";
 
 export const personalProjects: PersonalProjectConfig[] = [
   {
-    name: "AlmondBarista",
-    projectImgSrc: "almondbarista.png",
-    linkToProjectOnClick: openLinkOnClick("https://almondbarista.netlify.app/"),
-    linkToRepoOnClick: openLinkOnClick("https://github.com/stefan5441/almondbarista"),
-    techUsed: [
-      {
-        name: "React",
-        icon: FaReact,
-        url: "https://react.dev",
-      },
-      {
-        name: "TypeScript",
-        icon: SiTypescript,
-        url: "https://www.typescriptlang.org",
-      },
-      {
-        name: "Vite",
-        icon: SiVite,
-        url: "https://vitejs.dev",
-      },
-      {
-        name: "CSS",
-        icon: FaCss3Alt,
-        url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-      },
-      {
-        name: "Dexie.js",
-        icon: IoLogoJavascript,
-        url: "https://dexie.org/",
-      },
-      {
-        name: "Netlify",
-        icon: SiNetlify,
-        url: "https://www.netlify.com/",
-      },
-      {
-        name: "GitHub",
-        icon: FaGithub,
-        url: "http://github.com/",
-      },
-    ],
-    projectDescription:
-      "A simple, minimalist, privacy-focused diary app. Your data stays private, saved locally in your browser.",
-    features: [
-      "Daily input - Enter and save your thoughts in a text box",
-      "History overview - Browse and navigate through previous entries",
-      "Local storage - All data is stored locally in your browser using IndexedDB",
-      "Data transfer - Easily transfer data between browsers with the 'download data' and 'upload data' buttons",
-    ],
-  },
-  {
+    id: "izvrshitel",
     name: "Izvrshitel",
-    projectImgSrc: "izvrshitel.png",
+    projectImgSrc: "/izvrshitel.png",
     linkToProjectOnClick: openLinkOnClick("https://izvrshitel.netlify.app/"),
-    linkToRepoOnClick: openLinkOnClick("https://github.com/stefan5441/izvrshitel"),
+    linkToRepoOnClick: openLinkOnClick(
+      "https://github.com/stefan5441/izvrshitel",
+    ),
     techUsed: [
       {
         name: "React",
@@ -114,10 +66,15 @@ export const personalProjects: PersonalProjectConfig[] = [
     ],
   },
   {
+    id: "react-activity-heatmap",
     name: "react-activity-heatmap",
-    projectImgSrc: "reactactivityheatmap.png",
-    linkToProjectOnClick: openLinkOnClick("https://react-activity-heatmap-demo.netlify.app/"),
-    linkToRepoOnClick: openLinkOnClick("https://github.com/stefan5441/react-activity-heatmap"),
+    projectImgSrc: "/reactactivityheatmap.png",
+    linkToProjectOnClick: openLinkOnClick(
+      "https://react-activity-heatmap-demo.netlify.app/",
+    ),
+    linkToRepoOnClick: openLinkOnClick(
+      "https://github.com/stefan5441/react-activity-heatmap",
+    ),
     techUsed: [
       {
         name: "React",
@@ -153,6 +110,60 @@ export const personalProjects: PersonalProjectConfig[] = [
       "Interactive cells - Click callbacks and tooltip support for rich user interactions",
       "Flexible formatting - Control month name format, locale, and cell styles with ease",
       "Accessibility built-in - Aria labels for both the heatmap container and individual cells",
+    ],
+  },
+  {
+    id: "almondbarista",
+    name: "AlmondBarista",
+    projectImgSrc: "/almondbarista.png",
+    linkToProjectOnClick: openLinkOnClick("https://almondbarista.netlify.app/"),
+    linkToRepoOnClick: openLinkOnClick(
+      "https://github.com/stefan5441/almondbarista",
+    ),
+    techUsed: [
+      {
+        name: "React",
+        icon: FaReact,
+        url: "https://react.dev",
+      },
+      {
+        name: "TypeScript",
+        icon: SiTypescript,
+        url: "https://www.typescriptlang.org",
+      },
+      {
+        name: "Vite",
+        icon: SiVite,
+        url: "https://vitejs.dev",
+      },
+      {
+        name: "CSS",
+        icon: FaCss3Alt,
+        url: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      },
+      {
+        name: "Dexie.js",
+        icon: IoLogoJavascript,
+        url: "https://dexie.org/",
+      },
+      {
+        name: "Netlify",
+        icon: SiNetlify,
+        url: "https://www.netlify.com/",
+      },
+      {
+        name: "GitHub",
+        icon: FaGithub,
+        url: "http://github.com/",
+      },
+    ],
+    projectDescription:
+      "A simple, minimalist, privacy-focused diary app. Your data stays private, saved locally in your browser.",
+    features: [
+      "Daily input - Enter and save your thoughts in a text box",
+      "History overview - Browse and navigate through previous entries",
+      "Local storage - All data is stored locally in your browser using IndexedDB",
+      "Data transfer - Easily transfer data between browsers with the 'download data' and 'upload data' buttons",
     ],
   },
 ];
