@@ -11,7 +11,7 @@ export const PersonalProject = () => (
     fallbackPath="/personal-projects"
     renderLeftColumn={(project) => (
       <>
-        <div className="border-surface col-span-2 rounded-md border-2 p-4">
+        <div className="border-surface rounded-md border-2 p-4">
           <LabeledSection label="Technologies used">
             <div className="flex flex-wrap items-center gap-x-3 gap-y-1 leading-normal">
               {project.techUsed.map((tech) => (

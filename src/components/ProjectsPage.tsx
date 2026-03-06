@@ -16,7 +16,7 @@ export const ProjectsPage = <
   renderCardContent,
 }: Props<T>) => {
   return (
-    <div className="grid w-full grid-cols-3 items-start gap-6 px-1 py-2">
+    <div className="grid w-full grid-cols-1 items-start gap-6 px-1 py-2 md:grid-cols-2 xl:grid-cols-3">
       {projects.map((project) => (
         <ProjectCard
           key={project.id}
