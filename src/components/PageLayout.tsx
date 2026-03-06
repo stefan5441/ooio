@@ -8,7 +8,7 @@ type Props = {
 
 export const PageLayout = ({ children }: Props) => {
   return (
-    <div className="flex h-screen flex-col px-8 xl:px-36">
+    <div className="flex flex-col px-8 xl:px-36" style={{ height: "100dvh" }}>
       <NavBar />
       <div className="min-h-0 w-full flex-1 overflow-y-auto py-8 xl:py-0">
         {children}
