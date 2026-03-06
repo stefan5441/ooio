@@ -20,14 +20,14 @@
     --color-primary-hover: #d4d4d8;
   }
 
-  /* .dark {
-    --color-bg: #ffffff;
-    --color-text: #18181b;
-    --color-text-muted: #71717a;
+  [data-theme="light"] {
+    --color-bg: #fafafa;
+    --color-text: #09090b;
+    --color-text-muted: #52525b;
     --color-surface: #f4f4f5;
-    --color-primary: #059669;
+    --color-primary: #34d399;
     --color-primary-hover: #047857;
-  } */
+  }
 
   html,
   body,

@@ -1,12 +1,20 @@
 import { useState } from "react";
 import type { IconType } from "react-icons";
 import { SiLeetcode } from "react-icons/si";
-import { MdEmail, MdMarkEmailRead, MdMenu, MdClose } from "react-icons/md";
 import { FaCat, FaDog, FaFrog, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  MdEmail,
+  MdMarkEmailRead,
+  MdMenu,
+  MdClose,
+  MdLightMode,
+  MdDarkMode,
+} from "react-icons/md";
 
 import { Button } from "./Button";
 import { openLinkOnClick } from "../utils";
 import { useLocation, useNavigate } from "react-router-dom";
+import { useTheme } from "../hooks/useTheme";
 
 type NavBarTab = {
   icon: IconType;
@@ -19,6 +27,7 @@ type NavBarTab = {
 export const NavBar = () => {
   const navigate = useNavigate();
   const { pathname } = useLocation();
+  const { theme, toggle } = useTheme();
   const [copied, setCopied] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -79,6 +88,11 @@ export const NavBar = () => {
       icon: copied ? MdMarkEmailRead : MdEmail,
       onClick: handleCopy,
       isDisabled: copied,
+    },
+    {
+      label: "",
+      icon: theme === "dark" ? MdLightMode : MdDarkMode,
+      onClick: toggle,
     },
   ];
 
