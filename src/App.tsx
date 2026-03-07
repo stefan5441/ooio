@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HomePage } from "./pages/HomePage";
 import { ActivityPage } from "./pages/ActivityPage";
 import { PageLayout } from "./components/PageLayout";
+import { NavigationProgress } from "./components/NavigationProgress";
 import { PersonalProject } from "./pages/PersonalProjects/PersonalProject";
 import { PersonalProjectsPage } from "./pages/PersonalProjects/PersonalProjectsPage";
 import { ProfessionalWorkPage } from "./pages/ProfessionalWork/ProfessionalWorkPage";
@@ -11,6 +12,7 @@ import { ProfessionalWorkProject } from "./pages/ProfessionalWork/ProfessionalWo
 function App() {
   return (
     <BrowserRouter>
+      <NavigationProgress />
       <PageLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
