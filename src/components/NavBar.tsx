@@ -141,7 +141,7 @@ export const NavBar = () => {
         </div>
 
         {menuOpen && (
-          <div className="fixed inset-0 z-40 flex items-center justify-center backdrop-blur-md">
+          <div className="bg-bg/80 fixed inset-0 z-40 flex items-center justify-center backdrop-blur-md">
             <div className="flex flex-col items-center gap-6">
               {navTabsConfig.map((tab) => (
                 <Button

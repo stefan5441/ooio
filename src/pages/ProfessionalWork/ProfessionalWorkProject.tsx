@@ -18,10 +18,11 @@ export const ProfessionalWorkProject = () => (
             <LabeledSection label="Project info">
               <div className="flex flex-col gap-2">
                 <div className="inline-flex items-center gap-1">
-                  <MdBadge /> My role: {project.role}
+                  <MdBadge className="shrink-0" /> My role: {project.role}
                 </div>
                 <div className="inline-flex items-center gap-1">
-                  <IoTime /> Project duration: {project.duration}
+                  <IoTime className="shrink-0" /> Project duration:{" "}
+                  {project.duration}
                 </div>
               </div>
             </LabeledSection>

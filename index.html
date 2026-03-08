@@ -15,6 +15,14 @@
     <link rel="preload" as="image" href="/sodexo.webp" />
     <link rel="preload" as="image" href="/xarviofm.png" />
 
+    <!-- Preload dark/light mode -->
+    <script>
+      document.documentElement.classList.add("no-transitions");
+      window.addEventListener("load", () => {
+        document.documentElement.classList.remove("no-transitions");
+      });
+    </script>
+
     <title>Stefan Chambov | Portfolio</title>
   </head>
   <body>

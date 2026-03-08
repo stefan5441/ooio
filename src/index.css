@@ -21,12 +21,12 @@
   }
 
   [data-theme="light"] {
-    --color-bg: #fafafa;
-    --color-text: #09090b;
-    --color-text-muted: #52525b;
-    --color-surface: #f4f4f5;
-    --color-primary: #34d399;
-    --color-primary-hover: #047857;
+    --color-bg: #f6f8f6;
+    --color-text: #141f14;
+    --color-text-muted: #5c7a5c;
+    --color-surface: #deeade;
+    --color-primary: #16a34a;
+    --color-primary-hover: #15803d;
   }
 
   html,
@@ -45,6 +45,15 @@
   * {
     -ms-overflow-style: none;
     scrollbar-width: none;
+
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease,
+      color 0.3s ease;
+  }
+
+  .no-transitions * {
+    transition: none !important;
   }
 
   *::-webkit-scrollbar {
@@ -61,8 +70,7 @@
       0 0 10px var(--color-primary),
       0 0 5px var(--color-primary) !important;
   }
-  #nprogress .spinner-icon {
-    border-top-color: var(--color-primary) !important;
-    border-left-color: var(--color-primary) !important;
+  #nprogress .spinner {
+    display: none !important;
   }
 }

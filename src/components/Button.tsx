@@ -19,7 +19,7 @@ export const Button = ({
       className={`text-primary hover:text-primary-hover disabled:text-primary-hover flex items-center gap-1 ${isActive ? "text-primary-hover" : ""}`}
       {...btnProps}
     >
-      {Icon && <Icon size={iconSize ?? 16} />}
+      {Icon && <Icon className="shrink-0" size={iconSize ?? 16} />}
       {label}
     </button>
   );
